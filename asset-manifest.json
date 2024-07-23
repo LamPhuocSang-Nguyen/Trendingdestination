@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Trendingdestination/static/css/main.637e0c23.css",
+    "main.js": "/Trendingdestination/static/js/main.5cb3a661.js",
+    "index.html": "/Trendingdestination/index.html",
+    "main.637e0c23.css.map": "/Trendingdestination/static/css/main.637e0c23.css.map",
+    "main.5cb3a661.js.map": "/Trendingdestination/static/js/main.5cb3a661.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.637e0c23.css",
+    "static/js/main.5cb3a661.js"
+  ]
+}
