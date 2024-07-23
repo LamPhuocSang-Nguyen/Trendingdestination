@@ -1,32 +1,26 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Products from './components/products/products.js';
-import { Container } from 'reactstrap';
-import { listCateTour } from './data.js';
+import { listCateTour, listTour } from './data.js';
 import React, {useState} from "react"
-import Product from './components/product/Product.js';
+import Buttons from './components/buttons/Buttons.js';
+import Cards from './components/cards/Cards.js';
+import { Container } from 'reactstrap';
+import './App.css';
+
+
 function App() {
-  const list = []
-
-  const [listCafeTour, setListCafeTour] = useState({ id: 1, title: "New York" });
   
-  const listTour = []
+  const [city,setCity] = useState({ id: 1, title: "New York"})
 
-  const titleClick = (x)=>{
-      setListCafeTour(x)
+  const handleClick = function(city){
+    setCity(city)
   }
   return (
-    <>
-    <h1>Perfect destination</h1>
-    <h2>Trending destination</h2>
-    <Buttons list={list} titleClick={titleClick}/>
-    <Cards listTour = {listTour.filter((tour)=>tour.category === listCafeTour.title)}/>
-
-
-{/* Button(props)
-const {list, titleClick} = props
-list.map((item, index) = (<Button key={index} onClick={titleClick(item.title)}/>item.title))
-*/}
-    </>
+    <Container>
+        <h2>Perfect destination</h2>
+        <h1>Trending destinations</h1>
+        <Buttons listCateTour={listCateTour} handleClick={handleClick} city={city}/>
+        <Cards listTour={listTour.filter((tour)=> tour.category === city.title)} />
+    </Container>
   );
 }
 
